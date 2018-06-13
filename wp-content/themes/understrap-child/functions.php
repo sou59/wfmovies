@@ -16,6 +16,10 @@ function theme_enqueue_styles() {
 	// Get the theme data
 	$the_theme = wp_get_theme();
     wp_enqueue_style( 'child-understrap-styles', get_stylesheet_directory_uri() . '/css/child-theme.min.css', array(), $the_theme->get( 'Version' ) );
+
+    // Chargement de notre feuille de style pour notre propre thème
+    wp_enqueue_style( 'custom-theme', get_stylesheet_directory_uri() . '/css/custom-theme.css', array() );
+
     wp_enqueue_script( 'jquery');
 	wp_enqueue_script( 'popper-scripts', get_template_directory_uri() . '/js/popper.min.js', array(), false);
     wp_enqueue_script( 'child-understrap-scripts', get_stylesheet_directory_uri() . '/js/child-theme.min.js', array(), $the_theme->get( 'Version' ), true );
@@ -51,7 +55,7 @@ function movie_init() { // initialisation
         "label" => "Films",
         "labels" => $labels,
         // on définit ici les options disponibles dans l'éditeur de notre custom post type : affichage dans ajouter film
-        "supports" => array("title", "editor", "author", "thumbnail", "comments", "custum_fields"), // custum_fields
+        "supports" => array("title", "editor", "author", "thumbnail", "comments", "custom-fields"), // custum_fields
         // option supplémentaire
         "public" => true,
         "has_archive" => true, // à ne pas oublier si vous utilisez un modèle d'archive

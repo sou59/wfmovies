@@ -18,15 +18,17 @@
                     </a>
                 </h2>
 
+                <h3>
+                    <!-- Affichage de la taxonomy réalisateur, 3e paramètre ce qui s'affiche -->
+                    <?php the_terms($post->ID, "realisateur", "Réalisateur : "); ?>
+                </h3>
+                
                 <p>
                     <!-- Affichage de la taxonomy genre, 3e paramètre ce qui s'affiche -->
                     <?php the_terms($post->ID, "genre", "Genre : "); ?>
                 </p>
 
-                <p>
-                    <!-- Affichage de la taxonomy réalisateur, 3e paramètre ce qui s'affiche -->
-                    <?php the_terms($post->ID, "realisateur", "Réalisateur : "); ?>
-                </p>
+                
                     
             </article>
 

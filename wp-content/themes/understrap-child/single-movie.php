@@ -16,6 +16,19 @@ if(have_posts()) {
                         <!-- info du film -->
                         <h1><?php the_title();  ?></h1>
                         <p><?php the_content();  ?></p>
+
+                        <!-- Affichage de la bande annonce elle ne gère pas l'affichage -->
+                        <p>
+                        <?php 
+                        $trailer = get_post_meta($post->ID, "trailer");
+                        echo $trailer[0];
+
+                        ?></p>
+
+                        <p>
+                        <?php the_field('titre'); ?>
+                        </p>
+                        
                     </div>
                 </div>
             </article>
