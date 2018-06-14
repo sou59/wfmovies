@@ -1,0 +1,21 @@
+2018-06-14T15:08:01+00:00 DEBUG 
+====Stripe Version: 4.1.7====
+====Start Log====
+Keys are not set correctly.
+====End Log====
+
+
+2018-06-14T15:08:41+00:00 DEBUG 
+====Stripe Version: 4.1.7====
+====Start Log====
+Error: Unable to verify domain - missing secret key.
+====End Log====
+
+
+2018-06-14T15:08:49+00:00 DEBUG 
+====Stripe Version: 4.1.7====
+====Start Log====
+Error: Unable to verify domain - missing secret key.
+====End Log====
+
+
